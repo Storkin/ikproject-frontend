@@ -1,0 +1,27 @@
+body {
+  background-color: #0a0a0a; /* Derin siyah arka plan */
+  color: #ffffff;
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+/* PrimeVue kartları ve panelleri için yuvarlak hatlar ve koyu gri/siyah zemin */
+.p-card, .p-panel, .p-dialog {
+  background-color: #141414 !important; /* Kart arkaplanları biraz daha açık siyah */
+  border-radius: 1.5rem !important; /* Belirgin yuvarlak hatlar */
+  border: 1px solid #2d2d2d; /* Hafif bir sınır çizgisi */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Mor detaylar için özel sınıflar */
+.text-accent-purple {
+  color: #a855f7 !important; /* Tailwind/PrimeFlex moru */
+}
+
+.bg-accent-purple {
+  background-color: #a855f7 !important;
+}
+
+.border-accent-purple {
+  border-color: #a855f7 !important;
+}
