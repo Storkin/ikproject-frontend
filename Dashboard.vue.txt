@@ -1,0 +1,23 @@
+<!-- Dashboard.vue içine eklenecekler -->
+<template>
+  <!-- ... önceki kodlar ... -->
+  <Button label="Kayıt Oluştur" @click="showModal" /> <!-- Butonu güncelle -->
+  
+  <!-- Modalı sayfanın en altına ekle -->
+  <NewEmployeeDialog ref="employeeDialogRef" />
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import { useEmployeeStore } from '@/stores/employeeStore';
+import NewEmployeeDialog from '@/components/NewEmployeeDialog.vue';
+
+const store = useEmployeeStore();
+const employeeDialogRef = ref(null);
+
+// Şablon (template) içinde artık store.totalEmployees şeklinde kullanabilirsin.
+
+const showModal = () => {
+  employeeDialogRef.value.openDialog();
+};
+</script>
